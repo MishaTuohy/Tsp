@@ -10,9 +10,7 @@ pizza delivery driver(Travelling Salesperson). Using the Simulated Annealing Alg
 
 The Simulating Annealing Algorithm imitates a heat treatment process used to
 increase the ductility and reduce the hardness of a material.
-
-This process is basically heating it up to a very high temperature and slowly
-cooling down the material.
+This process is basically heating it up to a very high temperature and slowly cooling down the material.
 
 How this algorithm makes use of this process is that we have a temperature variable
 and we have a coolingFactor variable. The temperature represents the starting temperature
@@ -30,7 +28,7 @@ How is this done in practice?
 We create two copies of the original data set and do the following.
 Choose two random indexes from both copies and swap them.
 We then compare the resulting sets and choose which is the faster route.
-Given the previous explanation, we use 
+Given the previous explanation, we use a probablity density function that uses the current temperature
+to choose whether or not we take in the fast or slow route.
 
-
-The reasoning for this is so that we don't get trapped in a local optimum instead of the global optimum.
+We repeat this process until the temperature reaches below 1. We then hopefully have the fastest route at the end.
