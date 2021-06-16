@@ -30,7 +30,7 @@ class Utility {
     // Generates a List of deliveries
     public static List<Delivery> readDeliveryList(String addressInput, Delivery startingPoint) {
         List<Delivery> deliveries = new ArrayList<>();
-         deliveries.add(0, startingPoint); // Adds the pizza place to the beginning of the list so the algorithm starts there
+        deliveries.add(0, startingPoint); // Adds the pizza place to the beginning of the list so the algorithm starts there
 
         // Splits the user input by the line breaks so it can be processed
         String[] deliveriesStringList = addressInput.split("[\\n]");
