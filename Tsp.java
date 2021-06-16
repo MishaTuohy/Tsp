@@ -196,6 +196,7 @@ public class Tsp {
         // Prints answer in console
         System.out.println("Final route:");
         System.out.println((endTime - startTime) / 1000000000 + " seconds");
+        System.out.println(" " + output.getRouteDistance() / 1000 + " km");
         System.out.println(" " + outputString);
         System.out.println();
     }
@@ -204,6 +205,7 @@ public class Tsp {
         // Prints initial route to console
         System.out.println();
         System.out.println("Initial Route");
+        System.out.println(initialRoute.getRouteDistance() / 1000 + " km");
         for(Delivery d : initialRoute.getDeliveries())
             System.out.print("  " + d.getOrderNumber());
 
@@ -219,7 +221,7 @@ public class Tsp {
         for(int i = 1; i <= outerSpeed; i++) {
             int count = 0;
             result = simulatedAnnealing(initialRoute, count);
-            System.out.println(i + ". " + result.getRouteDistance());
+            System.out.println(i + ". " + result.getRouteDistance() / 1000 + " km");
 
             for(Delivery d : result.getDeliveries())
                 System.out.print(" " + d.getOrderNumber());
